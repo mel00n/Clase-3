@@ -17,10 +17,24 @@ int main(void) {
     /* --- for --- */
     printf("=== for ===\n");
     /* TODO: imprimir los numeros 0 al 9 en una linea */
+    for( int i=0 ; i<10 ; i++ ){
+        printf("Valor de i: %d \n", i);
+    }
 
-    float lecturas[] = {23.1f, 24.5f, 25.0f, 26.3f, 25.8f};
+    float lecturas[] = {23.1f, 24.5f, 25.0f, 26.3f, 25.8f}; /*esto es un arreglo, su tipo de dato , nombre del arreglo con su [] y lista*/
     uint8_t n = 5;
+    uint8_t indice = 0;
+    float suma = 0.0f;
     /* TODO: recorrer lecturas[], imprimirlas y calcular el promedio */
+    while(indice < n){
+        printf("El valor del indice %d es %.2f \n" , indice , lecturas[indice]);
+        suma = suma + lecturas[indice];
+        indice= indice +1;
+    }
+    printf("El valor de la suma es : %.4f \n" , suma);
+
+    float promedio = suma / n;
+    printf("El promedio es : %.4f \n",  promedio);
 
     printf("\nCuenta regresiva:\n  ");
     /* TODO: for decreciente de 5 a 0 */
